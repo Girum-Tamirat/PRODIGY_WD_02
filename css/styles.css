@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+  }
+  
+  .stopwatch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .time-display {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 10px;
+    padding-top: 1rem;
+  }
+  
+  button {
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    transition: transform 0.3s ease;
+  }
+  button:hover {
+    transform: scale(1.05);
+  }
+  button:active{
+    transform: scale(1.07);
+  }
+  .green-background {
+    background-color: rgb(5, 68, 5);
+    color: rgb(7, 244, 7);
+    outline: 2px solid rgb(5, 68, 5);
+    outline-offset: 3.3px;
+  }
+
+  .red-background {
+      background-color: rgb(68, 5, 5);
+      color: rgb(244, 7, 7);
+      outline: 2px solid rgb(68, 5, 5);
+      outline-offset: 3.3px;
+  }
+  .gray-background{
+    color: #d6d5d5;
+    background-color:rgb(47, 47, 47);
+    outline: 2px solid rgb(47, 47, 47);
+    outline-offset: 3.3px;
+  }
+  .darkgray-background{
+    color: #d6d5d5;
+    background-color:rgb(27, 27, 27);
+    outline: 2px solid rgb(27, 27, 27);
+    outline-offset: 3.3px;
+  }
+
+
+
+  
