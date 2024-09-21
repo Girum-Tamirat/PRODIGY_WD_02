@@ -63,6 +63,16 @@ button:hover {
 button:active {
   transform: scale(1.07);
 }
+button:focus {
+  outline: 2px solid; 
+  outline-offset: 0px;
+  border-radius: 50%;
+}
+button:focus-visible {
+  outline: 2px solid;
+  outline-offset: 0;
+  border-radius: 50%;
+}
 
 .green-background {
   background-color: rgb(5, 68, 5);
