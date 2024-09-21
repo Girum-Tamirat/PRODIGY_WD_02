@@ -1,88 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000000;
-  }
-  
-  .stopwatch-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .time-display {
-    font-size: 5rem;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-  
-  .controls {
-    display: flex;
-    gap: 10px;
-    padding-top: 1rem;
-  }
-  
-  button {
-    padding: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 15px;
-    width: 70px;
-    height: 70px;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-    transition: transform 0.3s ease;
-  }
-  button:hover {
-    transform: scale(1.05);
-  }
-  button:active{
-    transform: scale(1.07);
-  }
-  .green-background {
-    background-color: rgb(5, 68, 5);
-    color: rgb(7, 244, 7);
-    outline: 2px solid rgb(5, 68, 5);
-    outline-offset: 3.3px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .red-background {
-      background-color: rgb(68, 5, 5);
-      color: rgb(244, 7, 7);
-      outline: 2px solid rgb(68, 5, 5);
-      outline-offset: 3.3px;
-  }
-  .gray-background{
-    color: #d6d5d5;
-    background-color:rgb(47, 47, 47);
-    outline: 2px solid rgb(47, 47, 47);
-    outline-offset: 3.3px;
-  }
-  .darkgray-background{
-    color: #d6d5d5;
-    background-color:rgb(27, 27, 27);
-    outline: 2px solid rgb(27, 27, 27);
-    outline-offset: 3.3px;
-  }
-  .laps {
-    margin-top: 20px;
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.stopwatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.time-display {
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  padding-top: 1rem;
+}
+
+button {
+  width: 70px;
+  height: 70px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 0;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1.07);
+}
+
+.green-background {
+  background-color: rgb(5, 68, 5);
+  color: rgb(7, 244, 7);
+  outline: 2px solid rgb(5, 68, 5);
+  outline-offset: 3.3px;
+}
+
+.red-background {
+  background-color: rgb(68, 5, 5);
+  color: rgb(244, 7, 7);
+  outline: 2px solid rgb(68, 5, 5);
+  outline-offset: 3.3px;
+}
+
+.gray-background {
+  color: #d6d5d5;
+  background-color: rgb(47, 47, 47);
+  outline: 2px solid rgb(47, 47, 47);
+  outline-offset: 3.3px;
+}
+
+.darkgray-background {
+  color: #d6d5d5;
+  background-color: rgb(27, 27, 27);
+  outline: 2px solid rgb(27, 27, 27);
+  outline-offset: 3.3px;
+}
+
+.laps {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .lap-item {
@@ -101,6 +109,7 @@
 .lap-val {
   margin-left: 9rem;
 }
+
 #laps {
   max-height: 200px;
   width: 100%;
@@ -112,44 +121,45 @@
   padding: 10px 0;
 }
 
+
 @media (max-width: 768px) {
   .time-display {
-      font-size: 4rem;
-      margin-bottom: 5rem;
+    font-size: 4rem;
+    margin-bottom: 5rem;
   }
 
   button {
-      width: 70px;
-      height: 70px;
-      font-size: 0.9rem;
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 0.9rem;
   }
 
   .lap-num, .lap-val {
-      margin: 0;
+    margin: 0;
   }
 }
 
 @media (max-width: 480px) {
   .time-display {
-      font-size: 3rem;
-      margin-bottom: 4rem;
+    font-size: 3rem;
+    margin-bottom: 4rem;
   }
 
   button {
-      width: 60px;
-      height: 60px;
-      margin-left: 20px;
-      margin-right: 20px;
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .lap-num, .lap-val {
-      font-size: 1rem;
-      margin: 0;
+    font-size: 1rem;
+    margin: 0;
   }
 
   .controls {
-      gap: 5px;
+    gap: 5px;
   }
 }
-
-  
